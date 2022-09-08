@@ -4,10 +4,11 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:elevation="3dp"
+    android:clickable="true"
+    android:background="@color/white"
     app:cardCornerRadius="1dp"
     android:layout_margin="3dp"
-    android:scrollbars="vertical"
-    app:cardBackgroundColor="@color/purple_500">
+    android:scrollbars="vertical">
 
     <LinearLayout
         android:scrollbars="vertical"
@@ -18,16 +19,26 @@
         android:gravity="center"
         android:background="@color/white">
 
-        <TableLayout
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <TableRow
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:text="Title :"
+                    android:text="Title"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1" />
+                <TextView
+                    android:text=":"
                     android:textStyle="bold"
                     android:padding="5dp"
                     android:textColor="@color/black"
@@ -36,106 +47,139 @@
                     android:layout_column="1" />
 
                 <TextView
+                    android:padding="2dp"
                     android:id="@+id/text_title"
-                    android:text="Starburst Galaxy M94 from Hubble"
+                    android:text="NA"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="2" />
 
-            </TableRow>
-            <TableRow
+            </LinearLayout>
+            <LinearLayout
                 android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:text="Copyright :"
+                    android:text="Copyright"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1" />
+                <TextView
+                    android:text=":"
                     android:textStyle="bold"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="1" />
-
                 <TextView
-                    android:text="ESA/HubbleNASA"
+                    android:padding="2dp"
+                    android:text="NA"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/text_copyright"
                     android:layout_column="2" />
 
-            </TableRow>
-            <TableRow
+            </LinearLayout>
+            <LinearLayout
                 android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:text="Date :"
+                    android:text="Date"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1" />
+                <TextView
+                    android:text=":"
                     android:textStyle="bold"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="1" />
-
                 <TextView
-                    android:text="ESA/HubbleNASA"
+                    android:padding="2dp"
+                    android:text="NA"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/text_date"
                     android:layout_column="2" />
 
-            </TableRow>
-            <TableRow
+            </LinearLayout>
+            <LinearLayout
                 android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:text="Type :"
+                    android:text="Type"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1" />
+                <TextView
+                    android:text=":"
                     android:textStyle="bold"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="1" />
-
                 <TextView
-                    android:text="image"
+                    android:text="NA"
+                    android:padding="2dp"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/text_type"
                     android:layout_column="2" />
 
-            </TableRow>
-            <TableRow
+            </LinearLayout>
+            <LinearLayout
                 android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:text="Version :"
+                    android:text="Version"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1" />
+                <TextView
+                    android:text=":"
                     android:textStyle="bold"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="1" />
-
                 <TextView
-                    android:text="v1"
+                    android:text="NA"
+                    android:padding="2dp"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/text_version"
                     android:layout_column="2" />
 
-            </TableRow>
-        </TableLayout>
+            </LinearLayout>
+        </LinearLayout>
         <ImageView
             android:scaleType="center"
             android:id="@+id/image_view"
@@ -157,7 +201,7 @@
         <TextView
             android:layout_marginTop="10dp"
             android:id="@+id/explanation"
-            android:text="It may appear, at first, like the Galaxy is producing the lightning, but really it's the Earth. The featured nighttime landscape was taken from a southern tip of the Italian Island of Sardinia in early June. The foreground rocks and shrubs are near the famous Capo Spartivento Lighthouse, and the camera is pointed south toward Algeria in Africa.  In the distance, across the Mediterranean Sea, a thunderstorm is threatening, with several electric lightning strokes caught together during this 25-second wide-angle exposure.  Much farther in the distance, strewn about the sky, are hundreds of stars in the neighborhood of our Sun in the Milky Way Galaxy. Farthest away, and slanting down from the upper left, are billions of stars that together compose the central band of our Milky Way.   Free Lecture: APOD editor to speak in NYC on January 3"
+            android:text="NA"
             android:padding="5dp"
             android:fontFamily="@font/roboto"
             android:textColor="@color/black"

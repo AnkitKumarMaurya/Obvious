@@ -3,6 +3,7 @@ package com.smarthub.obvious.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -37,12 +38,12 @@ public class ImageDetailsAdapter extends RecyclerView.Adapter<ImageDetailsAdapte
         Glide.with(holder.imageView).
                 load(imageListItems.get(position).getUrl()).
                 into(holder.imageView);
-        holder.textTitle.setText(imageListItems.get(position).getTitle());
-        holder.textCopyright.setText(imageListItems.get(position).getCopyright());
-        holder.textDate.setText(imageListItems.get(position).getDate());
-        holder.textType.setText(imageListItems.get(position).getMedia_type());
-        holder.textVersion.setText(imageListItems.get(position).getService_version());
-        holder.explanation.setText(imageListItems.get(position).getExplanation());
+        holder.textTitle.setText((imageListItems.get(position).getTitle()!=null)?imageListItems.get(position).getTitle():"NA");
+        holder.textCopyright.setText((imageListItems.get(position).getCopyright()!=null)?imageListItems.get(position).getCopyright():"NA");
+        holder.textDate.setText((imageListItems.get(position).getDate()!=null)?imageListItems.get(position).getDate():"NA");
+        holder.textType.setText((imageListItems.get(position).getMedia_type()!=null)?imageListItems.get(position).getMedia_type():"NA");
+        holder.textVersion.setText((imageListItems.get(position).getService_version()!=null)?imageListItems.get(position).getService_version():"NA");
+        holder.explanation.setText((imageListItems.get(position).getExplanation()!=null)?imageListItems.get(position).getExplanation():"NA");
     }
 
     @Override
@@ -68,6 +69,26 @@ public class ImageDetailsAdapter extends RecyclerView.Adapter<ImageDetailsAdapte
             textType = itemView.findViewById(R.id.text_type);
             textVersion = itemView.findViewById(R.id.text_version);
             explanation = itemView.findViewById(R.id.explanation);
+
+//            textCopyright.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+//                @Override
+//                public void onGlobalLayout() {
+//
+//                    if (textCopyright.getWidth()>0) {
+//                        textTitle.getLayoutParams().width = 200;
+//                        textDate.getLayoutParams().width = 200;
+//                        textTitle.getLayoutParams().width = 200;
+//                        textType.getLayoutParams().width = textCopyright.getWidth();
+//                        textVersion.getLayoutParams().width = 200;
+//                        // removing OnGlobalLayoutListener
+//                        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN) {
+//                            textCopyright.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+//                        } else {
+//                            textCopyright.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+//                        }
+//                    }
+//                }
+//            });
         }
     }
 }
