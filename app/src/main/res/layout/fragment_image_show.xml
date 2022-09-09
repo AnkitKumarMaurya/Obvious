@@ -50,6 +50,7 @@
 
         <LinearLayout
             android:alpha="0.5"
+            android:visibility="gone"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:layout_centerVertical="true"

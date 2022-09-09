@@ -7,7 +7,7 @@
     android:clickable="true"
     android:background="@color/white"
     app:cardCornerRadius="1dp"
-    android:layout_margin="3dp"
+    android:padding="3dp"
     android:scrollbars="vertical">
 
     <LinearLayout

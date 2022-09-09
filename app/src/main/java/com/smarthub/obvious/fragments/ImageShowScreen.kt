@@ -38,41 +38,41 @@ class ImageShowScreen(var currentPos : Int) : Fragment() {
         listView?.adapter = imageListAdapter
         listView?.scrollToPosition(currentPos)
 
-        var arrowLeft = view.findViewById<View>(R.id.arrow_left)
-        var arrowRight = view.findViewById<View>(R.id.arrow_right)
+//        var arrowLeft = view.findViewById<View>(R.id.arrow_left)
+//        var arrowRight = view.findViewById<View>(R.id.arrow_right)
         var back = view.findViewById<View>(R.id.back)
 
         back.setOnClickListener {
             requireActivity().onBackPressed()
         }
 
-        arrowLeft.setOnClickListener {
-            currentPos-=1
-            if (currentPos<=0)
-                it.visibility = View.GONE
-
-            if (currentPos < imageListAdapter?.itemCount!! && arrowRight.visibility == View.GONE)
-                arrowRight.visibility = View.VISIBLE
-
-            listView?.smoothScrollToPosition(currentPos)
-        }
-
-        arrowRight.setOnClickListener {
-            currentPos+=1
-            if (currentPos>0 && arrowLeft.visibility == View.GONE)
-                arrowLeft.visibility = View.VISIBLE
-
-            if (currentPos >= imageListAdapter?.itemCount!!-1)
-                it.visibility = View.GONE
-
-            listView?.smoothScrollToPosition(currentPos)
-        }
-
-        if (currentPos<=0)
-            arrowLeft.visibility = View.GONE
-
-        if (currentPos >= imageListAdapter?.itemCount!!-1)
-            arrowRight.visibility = View.GONE
+//        arrowLeft.setOnClickListener {
+//            currentPos-=1
+//            if (currentPos<=0)
+//                it.visibility = View.GONE
+//
+//            if (currentPos < imageListAdapter?.itemCount!! && arrowRight.visibility == View.GONE)
+//                arrowRight.visibility = View.VISIBLE
+//
+//            listView?.smoothScrollToPosition(currentPos)
+//        }
+//
+//        arrowRight.setOnClickListener {
+//            currentPos+=1
+//            if (currentPos>0 && arrowLeft.visibility == View.GONE)
+//                arrowLeft.visibility = View.VISIBLE
+//
+//            if (currentPos >= imageListAdapter?.itemCount!!-1)
+//                it.visibility = View.GONE
+//
+//            listView?.smoothScrollToPosition(currentPos)
+//        }
+//
+//        if (currentPos<=0)
+//            arrowLeft.visibility = View.GONE
+//
+//        if (currentPos >= imageListAdapter?.itemCount!!-1)
+//            arrowRight.visibility = View.GONE
 
         var snapHelper = LinearSnapHelper()
         snapHelper.attachToRecyclerView(listView)
